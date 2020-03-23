@@ -1,12 +1,17 @@
 # MikroTik.
-
+- [Сброс](#Сброс)
+- [Cетевой мост](#bridge)
+- [DHCP Server](#Server)
+- [Wi-Fi](#Wi-Fi)
+- [Обновление Offline](#Offline)
+- [Обновление Online](#Online)
 ## Сброс
 Сбрасываем конфигурацию в ноль. <br>
 ```
 System => Reset Configuration => [V]No Default Configuration => [Reset Configuration] => [Yes]
 ```
 ![](./img/ResetConf.png)<br>
-## Cетевой мост (bridge).
+## bridge
 Создаем сетевой мост по умолчанию. <br>
 ```
 Bridge => Bridge => [+] => [OK]
@@ -14,11 +19,12 @@ Bridge => Bridge => [+] => [OK]
 ![](./img/Bridge_Bridge.png)<br>
 Добавляем в него все локальные интерфейсы.<br>
 ```
-Bridge => Ports => General => Interface: <interface> => [OK]
+Bridge => Ports => [+] => General => Interface: <interface> => [OK]
 ```
 ![](./img/Bridge_Ports.png)<br>
 
-## DHCP Server.
+## DHCP
+### Server.
 Проверяем что у нас есть IP-адрес на интерфейсе с которого мы собираемся слушать дисковер запросы(раздавать адреса).<br>
 (Если нет, то добавляем) <br>
 ```
@@ -62,6 +68,24 @@ Wireless => [WiFi Interfaces] => 'wnan0 или wlan1' => [Wireless]
 ```
 ![](./img/Wireless_WiFi-Interfaces_wlan_Wireless.png)<br>
 
+## Обновление.
+### Offline
+Смотрим платформу вашего железа.
+![](./img/WinBox.png)<br>
+И версию ОС.
+```
+System => Routerboard
+```
+![](./img/System_Routerboard.png)<br>
+Ходим на сайт https://mikrotik.com/download и скачиваем понравившуюся прошивку.<br>
+(если не какая не нравится, а обновить хочется, то качай: Long-term - Main package, не ошебешся)<br>
+открываем Files перетакиваем туда образ. <br>
+перезагружаем ОС<br>
+```
+System => Reboot => [Yes]
+```
+Надеемся что после обновления не чего не отъедет(особенно при обновлении на Testing или Development). <br>
+### Online
 #### Fork + Git
     1. создаём локальную папку репозитория. (не забываем про General settings).
     2. Fork, инициализируем локальный репозиторий(из пункта 1).

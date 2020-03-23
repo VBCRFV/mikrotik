@@ -20,21 +20,22 @@ Bridge => Ports => General => Interface: <interface> => [OK]
 
 ## DHCP Server.
 Проверяем что у нас есть IP-адрес на интерфейсе с которого мы собираемся слушать дисковер запросы(раздавать адреса).<br>
+(Если нет, то добавляем) <br>
 ```
-IP => Addresses
+IP => Addresses => [+]
 ```
 ![](./img/IP_Address(DHCP).png)<br>
 
 Создаём пул адресов для DHCP. <br>
 ```
-IP => Pool => Pools => [+]
+IP => Pool => [Pools] => [+]
 ```
 ![](./img/IP_Pool_Pools_DHCP.png)<br>
 
 Задаём основные настройки сети.
 
 ```
-IP => DHCP Server => [DHCP] => Networks => [+]
+IP => DHCP Server => [DHCP] => [Networks] => [+]
 ```
 
 ![](./img/IP_DHCP-Server_Networks.png)<br>
@@ -42,10 +43,24 @@ IP => DHCP Server => [DHCP] => Networks => [+]
 Создаем DHCP Server.
 
 ```
-#IP => DHCP Server => [DHCP] => [+]
+IP => DHCP Server => [DHCP] => [+]
 ```
 
 ![](./img/IP_DHCP-Server_DHCP.png)<br>
+
+## Wi-Fi.
+
+Открываем стандартный "Security Profile" выбираем шифрование (WPA2 PSK) и придумываем пароль (WPA2 Pre-Shared Key:).<br>
+```
+Wireless => [Security Profiles] => 'default' => [General]
+```
+![](./img/Wireless_Security-Profiles_default_General.png)<br>
+
+Настраиваем Wi-Fi интерфейс как точку доступа. <br>
+```
+Wireless => [WiFi Interfaces] => 'wnan0 или wlan1' => [Wireless]
+```
+![](./img/Wireless_WiFi-Interfaces_wlan_Wireless.png)<br>
 
 #### Fork + Git
     1. создаём локальную папку репозитория. (не забываем про General settings).

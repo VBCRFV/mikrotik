@@ -4,6 +4,7 @@
 - [DHCP Server](#Server)
 - [Wi-Fi](#Wi-Fi)
 - [Маршрутизация](#Маршрутизация)
+- [DNS](#DNS)
 - [Обновление Offline](#Offline)
 - [Обновление Online](#Online)
 ## Сброс.
@@ -72,12 +73,18 @@ Wireless => [WiFi Interfaces] => 'wnan0 или wlan1' => [Wireless]
 ## Маршрутизация.
 Добавляем  маршрутизатор по умолчанию(если нет)<br>
 ```
-IP => Routes => Routes => [+] => [General]
+IP => Routes => [Routes] => [+] => [General]
 ```
 ![](./img/IP_Routes_Routes.png)<br>
-проверяем в терминале. <br>
+проверяем в терминале(для приостановки пинга <Ctrl+c>). <br>
 ![](./img/terminal_ping_8888.png)<br>
-
+## DNS.
+```
+IP => DNS
+```
+![](./img/IP_DNS.png)<br>
+проверяем в терминале(для приостановки пинга <Ctrl+c>). <br>
+![](./img/terminal_ping_yaru.png)<br>
 ## Обновление.
 ### Offline
 

@@ -3,15 +3,16 @@
 - [Cетевой мост](#bridge)
 - [DHCP Server](#Server)
 - [Wi-Fi](#Wi-Fi)
+- [Маршрутизация](#Маршрутизация)
 - [Обновление Offline](#Offline)
 - [Обновление Online](#Online)
-## Сброс
+## Сброс.
 Сбрасываем конфигурацию в ноль. <br>
 ```
 System => Reset Configuration => [V]No Default Configuration => [Reset Configuration] => [Yes]
 ```
 ![](./img/ResetConf.png)<br>
-## bridge
+## Bridge.
 Создаем сетевой мост по умолчанию. <br>
 ```
 Bridge => Bridge => [+] => [OK]
@@ -23,8 +24,8 @@ Bridge => Ports => [+] => General => Interface: <interface> => [OK]
 ```
 ![](./img/Bridge_Ports.png)<br>
 
-## DHCP
-### Server.
+## DHCP.
+### Server
 Проверяем что у нас есть IP-адрес на интерфейсе с которого мы собираемся слушать дисковер запросы(раздавать адреса).<br>
 (Если нет, то добавляем) <br>
 ```
@@ -68,8 +69,18 @@ Wireless => [WiFi Interfaces] => 'wnan0 или wlan1' => [Wireless]
 ```
 ![](./img/Wireless_WiFi-Interfaces_wlan_Wireless.png)<br>
 
+## Маршрутизация.
+Добавляем  маршрутизатор по умолчанию(если нет)<br>
+```
+IP => Routes => Routes => [+] => [General]
+```
+![](./img/IP_Routes_Routes.png)<br>
+проверяем в терминале. <br>
+![](./img/terminal_ping_8888.png)<br>
+
 ## Обновление.
 ### Offline
+
 Смотрим платформу вашего железа.
 ![](./img/WinBox.png)<br>
 И версию ОС.

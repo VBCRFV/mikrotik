@@ -104,6 +104,11 @@ System => Reboot => [Yes]
 ```
 Надеемся что после обновления не чего не отъедет(особенно при обновлении на Testing или Development). <br>
 ### Online
+```
+Quick Set => [Check For Updates] => Channel: <long term или stable> => Download&Install
+```
+![](./img/Check_For_Updates.png)<br>
+
 #### Fork + Git
     1. создаём локальную папку репозитория. (не забываем про General settings).
     2. Fork, инициализируем локальный репозиторий(из пункта 1).

@@ -103,6 +103,15 @@ System => Routerboard
 System => Reboot => [Yes]
 ```
 Надеемся что после обновления не чего не отъедет(особенно при обновлении на Testing или Development). <br>
+## Безопасность.
+### IP => Services
+Отключаются все не используемые сервисы. <br>
+Во все используемые, добавляем <Available From> <br>
+### L2 open ports
+![](./img/FrequentlyUserPorts.png)<br>
+IP => Neighbors => Discovery Settings => interface: [!] [WAN] => [OK]<br>
+### IPv6
+
 ### Online
 ```
 Quick Set => [Check For Updates] => Channel: <long term или stable> => Download&Install

@@ -126,11 +126,23 @@ Quick Set => [Check For Updates] => Channel: <long term или stable> => Downlo
 ```
 Bridge => Bridge => [+] => [VLAN] => "[V] VLAN Filtring"
 ```
+![](./img/vlan_bridge.png)<br>
 в созданный мост добавляем порты на которых будут использоватся VLAN <br>
 ```
 Bridge => Ports => [+]
 ```
-![](./img/vlan_bridge.png)<br>
+![](./img/vlan_bridge_ports.png) <br>
+"[V] Hardware Offload" - обработка L2 на уровне комутатора (снимает нагрузку процессора) <br>
+<br>
+VLAN на портах (поведение входящего трафика)
+![](./img/vlan_bridge_ports_vlans.png) <br>
+PVID: - как маркеровать не маркерованный трафик (не VLAN трафик будет промаркерован как VLAN=4001) <br>
+Frame Types: - какой трафик принемает порт.  <br>
+```
+admit all - весь (тегированный и не тегированный)
+admit only VLAN - тегированный
+admit only untargged - не тегированный
+```
 #### Fork + Git
     1. создаём локальную папку репозитория. (не забываем про General settings).
     2. Fork, инициализируем локальный репозиторий(из пункта 1).

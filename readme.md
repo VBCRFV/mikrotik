@@ -7,6 +7,7 @@
 - [DNS](#DNS)
 - [Обновление Offline](#Offline)
 - [Обновление Online](#Online)
+- [VLAN](#VLAN)
 ## Сброс.
 Сбрасываем конфигурацию в ноль. <br>
 ```
@@ -117,6 +118,8 @@ IP => Neighbors => Discovery Settings => interface: [!] [WAN] => [OK]<br>
 Quick Set => [Check For Updates] => Channel: <long term или stable> => Download&Install
 ```
 ![](./img/Check_For_Updates.png)<br>
+
+## VLAN
 
 #### Fork + Git
     1. создаём локальную папку репозитория. (не забываем про General settings).

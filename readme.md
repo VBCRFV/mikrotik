@@ -127,6 +127,7 @@ Quick Set => [Check For Updates] => Channel: <long term или stable> => Downlo
 Bridge => Bridge => [+] => [VLAN] => "[V] VLAN Filtring"
 ```
 ![](./img/vlan_bridge.png)<br>
+<br>
 в созданный мост добавляем порты на которых будут использоватся VLAN <br>
 ```
 Bridge => Ports => [+]
@@ -134,8 +135,8 @@ Bridge => Ports => [+]
 ![](./img/vlan_bridge_ports.PNG) <br>
 "[V] Hardware Offload" - обработка L2 на уровне комутатора (снимает нагрузку процессора) <br>
 <br>
-VLAN на портах (поведение входящего трафика)
-![](./img/vlan_bridge_ports_vlan.PNG) <br>
+VLAN на портах (поведение входящего трафика)<br>
+![](./img/vlan_bridge_ports_vlan.PNG) 
 PVID: - как маркеровать не маркерованный трафик (не VLAN трафик будет промаркерован как VLAN=4001) <br>
 Frame Types: - какой трафик принемает порт.  <br>
 ```

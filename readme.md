@@ -124,7 +124,11 @@ Quick Set => [Check For Updates] => Channel: <long term или stable> => Downlo
 так как на основе интерфейсов, становится неудобно настроивать уже от 3 VLAN и более, <br>
 настраиваем на основе мостов, создаём мост и говорим смотреть на метки.
 ```
-Bridge => Bridge => [+] => [VLAN] => "[V] VLAN Filtring" <br>
+Bridge => Bridge => [+] => [VLAN] => "[V] VLAN Filtring"
+```
+в созданный мост добавляем порты на которых будут использоватся VLAN <br>
+```
+Bridge => Ports => [+]
 ```
 ![](./img/vlan_bridge.png)<br>
 #### Fork + Git
